@@ -6,7 +6,7 @@ use candid::{CandidType, Principal};
 use std::borrow::Cow;
 use std::cell::RefCell; // Thread-local storage for managing state
 
-// ask struct to represent a to-do item
+// struct to represent a to-do item
 #[derive(CandidType, Deserialize, Serialize, Clone, Debug)]
 pub struct Task {
     pub id: u64,         
