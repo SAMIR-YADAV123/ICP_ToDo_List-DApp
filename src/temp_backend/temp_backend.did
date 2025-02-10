@@ -1,3 +1,11 @@
 service : {
-    "greet": (text) -> (text) query;
+    add_task: (title : text) -> (nat64);
+    delete_task: (id : nat64) -> (variant { Ok; Err: text });
+    update_task: (id : nat64, new_title : opt text, completed : opt bool) -> (variant { Ok; Err: text });
+    get_tasks: () -> (vec record { 
+        id: nat64; 
+        title: text; 
+        completed: bool; 
+        owner: principal 
+    });
 }
